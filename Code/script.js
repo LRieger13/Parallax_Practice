@@ -1,4 +1,4 @@
-let controller = new ScrollMagic.controller();
+let controller = new ScrollMagic.Controller();
 let timeline = new TimelineMax();
 
 /*
@@ -7,17 +7,18 @@ timeline
 .to('.content-images', 3, {opacity: 0}, '-=2');*/
 
 timeline
-    .to(".bee", 3, {y: -300})
-    .to(".bee2", 3, {y: -200}, "-=3")
-    .to(".bg1", 3, {y: 50}, "-=3")
-    .to('.content', 3, {top: '0%'}, '-=3');
+    .to(".bg1", 3, {y: 50})
+    .to(".bee", 3, {y: -300}, "-=3")
+    .to(".content", 3, {top: '0%'}, '-=3')
+    .from(".content-images", {opacity: 0})
+    .to(".content-images", {opacity: 1, duration: 6, ease: "elastic"}, "-=3");
 
-    let scene = new ScrollMagic.scene({
-        triggerElement: 'section',
-        duration: '100%',
+    let scene = new ScrollMagic.Scene({
+        triggerElement: '.section',
+        duration: '200%',
         triggerHook: 0, 
     })
 
     .setTween(timeline)
-    .setPin("section")
+    .setPin(".section")
     .addTo(controller);
