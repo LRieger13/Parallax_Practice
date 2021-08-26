@@ -58,6 +58,11 @@ nav {
     min-height: 50vh;
     text-align: center;
     padding-top: 150px;
+    padding-bottom: 10px;
+}
+
+.logo1 {
+    border-radius: 50%;
 }
 
 .text {
@@ -65,4 +70,40 @@ nav {
     font-size: smaller;
 }
 
+/* ABOUT 
+.resume {
+    width: 100%;
+    background:rgb(24,24,24);
+    min-height: 100%;
+    z-index: 2;
+    position: absolute;
+}
 
+.resume-content {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 50vh;
+    text-align: center;
+    padding-top: 150px;
+}
+
+.resume-text {
+    padding: 2% 20%;
+    font-size: smaller;
+}
+
+/* CONTACT 
+.contact {
+    width: 100%;
+    background:rgb(24,24,24);
+    min-height: 100%;
+    z-index: 2;
+    position: absolute;
+}
+
+.contact-content {
+    padding: 2% 20%;
+    font-size: smaller;
+}
+*/
