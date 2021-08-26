@@ -1,0 +1,431 @@
+/* 
+AUTHOR: Leah Rieger
+DATE: 07/20/2021
+
+NOTES --> 
+ - Add ABOUT, WORK, CONTACT pg
+ - Add functionality to cards when clicked;
+    Build landing pg;
+    parallax down to this section;
+ - when cards 'clicked' reveal change in
+    RDash to have info clicked on;
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+/* NAV 
+    NEED TO ADD LOGO;
+*/
+.nav {
+    background: #fad896;
+    list-style-type: none;
+    font-size: 15px;
+    justify-content: baseline;
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 15px;
+    overflow: hidden;
+}
+
+.nav li {
+    float: left;
+}
+
+.nav li a {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'paragraph';
+    color:rgb(53, 52, 50);
+}
+
+.nav li a:hover {
+    color:#B48A1A;
+}
+
+/* MAIN GLASS DIV */
+main {
+    min-height: 100vh;
+    background: #fad896;
+    /* TO CENTER GLASS */
+     
+    display: flex;
+    align-items: center; /* won't work w\out display FLEX */
+    justify-content: center; /* won't work w\out display FLEX */
+
+   /* background-image: url("./Images/Graphics/backgroundImgBee.png");
+    background-repeat: repeat; background-size: 175px; */
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+/* GLASS PANE */
+.glass {
+    background: white;
+    display: flex;
+    background: linear-gradient(
+        to right bottom,
+        rgba(252, 235, 179, 0.7), 
+        rgba(252, 235, 179, 0.2)); 
+    /* OPTIONAL BORDER  */
+    border-color: #B48A1A;
+    border-width: 5px;
+    border-style: double;
+    border-radius: 3px;
+    z-index: 2;
+    backdrop-filter:blur(4px);
+    box-shadow: 0px 15px 15px #3D3D3D;
+}
+
+
+/* LEFT 'DASH' */
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    background: linear-gradient(
+        to right bottom, 
+        rgba(252, 235, 179, 0.7), 
+        rgba(252, 235, 179, 0.3));
+    border-top-left-radius: 1px;
+    border-bottom-left-radius: 1px;
+    font-family: 'paragraph';
+    font-weight: lighter;
+}
+
+/* LINKS IN DASHBOARD */
+.link {
+    display: flex;
+    margin: 2px;
+    padding: 5px;
+    align-items: center;
+}
+
+.link h2 {
+    padding: 0 px 2rem;
+    margin: 10px;
+    font-size: 25px;
+}
+
+.link a:hover {
+    transform: translate(0px, -5px);
+}
+
+/* BOTTOM IN DASHBOARD */
+.pro {
+    background: linear-gradient(
+        to right bottom,
+        rgba(255, 247, 221, 0.8), 
+        rgba(228, 227, 211, 0.5));
+    border-radius: 5px;
+    padding: 1rem;
+    position: relative;
+    border-radius: 5px;
+    margin: 10px 10px 10px 10px;
+    padding: 1rem;
+    box-shadow: 10px 10px 5px rgba(44, 44, 44, 0.3);
+        /* ADD CLICK TO SEND EMAIL */
+}
+
+.pro img {
+    position: absolute;
+    top: -15%;
+    right: 4%;
+    width: 45%;
+}
+
+.pro h2{
+    width: 48%;
+    color: #3d3d3d;
+    font-weight: 600;
+    /* ADD CLICK HOVER */
+}
+
+.pro a {
+    text-decoration: none;
+    color: #3d3d3d;
+}
+
+.pro img:hover {
+    transform: translate(0px, -5px);
+}
+
+/* CARDS */
+.status {
+    margin-bottom: 3rem;
+    margin-right: auto;
+    background: linear-gradient(
+        to right bottom,
+        rgba(252, 235, 179, 0.7), 
+        rgba(252, 235, 179, 0.3));
+}
+
+/* RIGHT 'DASH' */
+.section1 {
+    margin: 10px 10px 10px 10px;
+}
+
+.section1 input {
+    background: linear-gradient(
+        to right bottom,
+        rgba(252, 235, 179, 0.7), 
+        rgba(252, 235, 179, 0.3));
+    border: none;
+    width: 50%;
+    padding: 0.5rem;
+    border-radius: 2px;
+}
+
+h1 {
+    color: #3d3d3d;
+    font-weight: 600;
+    font-size: 40px;
+    opacity: 0.8;
+    font-family: 'paragraph';
+}
+
+.link h2 {
+    color: #B48A1A;
+    font-weight: 300;
+    opacity: 0.8;
+    font-size: 30px;
+    font-family: 'subheading';
+}
+
+.link h3{
+    color: #B48A1A;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+h2 {
+    color: #3d3d3d;
+    font-weight: 300;
+    opacity: 0.8;
+    font-size: 30px;
+    font-family: 'subheading';
+}
+
+h3{
+    color: #3d3d3d;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+.RDash {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    overflow:auto;
+    margin: 10px 10px 10px 10px;
+    width: 100%;
+}
+
+.cards {
+    display: absolute;
+    width: 50%;
+    background: linear-gradient(
+        to right bottom,
+        rgba(255, 247, 221, 0.8), 
+        rgba(228, 227, 211, 0.5));
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 10px 10px 5px rgba(44, 44, 44, 0.3);
+    justify-content: space-between;   
+}
+
+.card-info {
+    display: relative;
+    align-items: left;
+    justify-content: space-evenly;
+    margin: 1rem 5px;
+    overflow: hidden;
+    font-family: 'paragraph';
+}
+
+/* HEXAGONS */
+.hex1, .hex2 {
+    background: linear-gradient(
+        to right bottom, 
+        rgb(252, 235, 179), 
+        rgba(255, 255, 255, 0.5)
+    );
+    height: 125px;
+    width: 135px;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    position: absolute;
+    filter:blur(10px);
+}
+    /* HEX POSITIONING */
+.hex1 {
+    top: 20%;
+    right: 5%;
+}
+
+.hex2 {
+    bottom: 5%;
+    left: 6%;
+}
+
+/* SMALL HEX */
+.hex3, .hex4 {
+    background: white;
+    background: linear-gradient(
+        to right bottom, 
+        rgb(252, 235, 179), 
+        rgba(255, 255, 255, 0.5)
+    );
+    height: 55px;
+    width: 60px;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    position: absolute;
+    filter:blur(2rem);
+}
+    /* HEX POSITIONING */
+.hex3 {
+    top: 10%;
+    right: 8%;
+}
+
+.hex4 {
+    bottom: 20%;
+    left: 1%;
+}
+
+/* MED HEX */
+.hex5, .hex6 {
+    background: white;
+    background: linear-gradient(
+        to right bottom, 
+        rgb(252, 235, 179), 
+        rgba(255, 255, 255, 0.5)
+    );
+    height: 22px;
+    width: 30px;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    position: absolute;
+    filter:blur(9px);
+}
+    /* HEX POSITIONING */
+.hex5 {
+    top: 15%;
+    right: 18%;
+}
+
+.hex6 {
+    bottom: 27%;
+    left: 10%;
+}
+
+/* FONT FAMILIES */
+@font-face {
+    font-family: Header;
+    src: url('./Fonts/Trailer\ Park\ Girl.otf');
+}
+
+@font-face {
+    font-family: subheading;
+    src: url('./Fonts/Documenta.otf');
+}
+
+@font-face {
+    font-family: paragraph;
+    src: url('./Fonts/Oswald-VariableFont_wght.ttf');
+}
+
+
+.footer {
+    /* fad896 icon bgcolor     background: linear-gradient(to right bottom, 
+    rgb(255, 170, 0), 
+    rgb(255, 205, 43));*/
+    background: #fad896;
+    font-size: 15px;
+    display:flex;
+}
+
+.footer {
+    display: table;
+    width: 100%;
+    text-align: center;
+}
+.guide .links {
+    display: table-cell;
+    vertical-align:top;
+    padding-top: 100px; 
+    padding-right: 50px;
+    padding-left: 50px;
+    text-decoration: none;
+    list-style-type: none;
+}
+.links li a{
+    color:#111;
+    font-family: 'paragraph';
+}
+.links li a:hover {
+    color:#9e7930;
+}
+.logo {
+    display: table-cell;
+    vertical-align:auto; 
+}
+.socials {
+    display: table-cell;
+    vertical-align:top;
+    padding-top: 100px; 
+}
+
+
+
+/* FOOTER */
+
+/*
+.footer, #nav {
+    font-size: 15px;
+}
+
+ SMALL SCREEN FOOTER RESPONSIVE
+@media (max-width: 567em) {
+    body {
+        margin-bottom: 20px;
+    }
+    .footer {
+        height: 50px;
+    }
+}*/
+
+/* STICKY FOOTER
+.footer {
+    padding-top: 30px;
+    margin-bottom: auto;
+    color: #3d3d3d;
+    background: linear-gradient(
+        to right bottom,
+        rgba(255, 247, 221, 0.8), 
+        rgba(228, 227, 211, 0.5));} 
+
+.footer a {
+    color: #3d3d3d;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #B48A1A;
+}
+*/

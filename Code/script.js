@@ -12,7 +12,7 @@ timeline
     .to(".content", 3, {top: '0%'}, '-=3')
     .from(".content-images", {opacity: 0})
     .to(".content-images", {opacity: 1, duration: 6, ease: "elastic"}, "-=3");
-
+    
     let scene = new ScrollMagic.Scene({
         triggerElement: '.section',
         duration: '200%',
@@ -22,3 +22,5 @@ timeline
     .setTween(timeline)
     .setPin(".section")
     .addTo(controller);
+
+    
