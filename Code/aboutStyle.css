@@ -3,10 +3,9 @@ AUTHOR: Leah Rieger
 DATE: 07/20/2021
 
 NOTES --> 
- - Add ABOUT, WORK, CONTACT pg
+ - Add WORK, CONTACT pg
  - Add functionality to cards when clicked;
     Build landing pg;
-    parallax down to this section;
  - when cards 'clicked' reveal change in
     RDash to have info clicked on;
 */
@@ -29,7 +28,7 @@ a {
     background: #fad896;
     list-style-type: none;
     font-size: 15px;
-    justify-content: baseline;
+    justify-content: center;        
 }
 
 .nav ul {
@@ -37,18 +36,27 @@ a {
     margin: 0;
     padding: 15px;
     overflow: hidden;
+    text-align: center;
 }
 
-.nav li {
-    float: left;
+.nav ul li {
+    display:inline-block;
+}
+
+.nav ul li img {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: auto;
 }
 
 .nav li a {
-    display: inline-block;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-family: 'paragraph';
+    font-weight: bold;
+    font-size:25px;
     color:rgb(53, 52, 50);
 }
 
@@ -198,7 +206,6 @@ h1 {
     font-weight: 600;
     font-size: 40px;
     opacity: 0.8;
-    font-family: 'paragraph';
 }
 
 .link h2 {
@@ -206,7 +213,6 @@ h1 {
     font-weight: 300;
     opacity: 0.8;
     font-size: 30px;
-    font-family: 'subheading';
 }
 
 .link h3{
@@ -337,19 +343,20 @@ h3{
 /* FONT FAMILIES */
 @font-face {
     font-family: Header;
-    src: url('./Fonts/Trailer\ Park\ Girl.otf');
+    src: url('/Fonts/Documenta.otf');
 }
 
 @font-face {
     font-family: subheading;
-    src: url('./Fonts/Documenta.otf');
+    src: url('/Fonts/GrutchShaded.ttf');
 }
 
 @font-face {
     font-family: paragraph;
-    src: url('./Fonts/Oswald-VariableFont_wght.ttf');
+    src: url('/Fonts/Mushy\ Loversy.ttf');
 }
 
+/* FOOTER */
 
 .footer {
     /* fad896 icon bgcolor     background: linear-gradient(to right bottom, 
@@ -369,63 +376,27 @@ h3{
     display: table-cell;
     vertical-align:top;
     padding-top: 100px; 
-    padding-right: 50px;
     padding-left: 50px;
+    padding-bottom: 50px;
     text-decoration: none;
     list-style-type: none;
 }
 .links li a{
     color:#111;
     font-family: 'paragraph';
+    font-weight: bold;
+    font-size:25px;
 }
 .links li a:hover {
     color:#9e7930;
 }
 .logo {
     display: table-cell;
-    vertical-align:auto; 
+    vertical-align:auto;     
 }
 .socials {
     display: table-cell;
     vertical-align:top;
     padding-top: 100px; 
+    padding-right: 50px;
 }
-
-
-
-/* FOOTER */
-
-/*
-.footer, #nav {
-    font-size: 15px;
-}
-
- SMALL SCREEN FOOTER RESPONSIVE
-@media (max-width: 567em) {
-    body {
-        margin-bottom: 20px;
-    }
-    .footer {
-        height: 50px;
-    }
-}*/
-
-/* STICKY FOOTER
-.footer {
-    padding-top: 30px;
-    margin-bottom: auto;
-    color: #3d3d3d;
-    background: linear-gradient(
-        to right bottom,
-        rgba(255, 247, 221, 0.8), 
-        rgba(228, 227, 211, 0.5));} 
-
-.footer a {
-    color: #3d3d3d;
-    text-decoration: none;
-}
-
-.footer a:hover {
-    color: #B48A1A;
-}
-*/
