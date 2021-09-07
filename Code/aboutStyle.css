@@ -363,7 +363,7 @@ h3{
     rgb(255, 170, 0), 
     rgb(255, 205, 43));*/
     background: #fad896;
-    font-size: 15px;
+    font-size: 12px;
     display:flex;
 }
 
@@ -374,8 +374,8 @@ h3{
 }
 .guide .links {
     display: table-cell;
-    vertical-align:top;
-    padding-top: 100px; 
+    vertical-align:middle;
+    padding-top: 50px; 
     padding-left: 50px;
     padding-bottom: 50px;
     text-decoration: none;
@@ -385,7 +385,7 @@ h3{
     color:#111;
     font-family: 'paragraph';
     font-weight: bold;
-    font-size:25px;
+    font-size:20px;
 }
 .links li a:hover {
     color:#9e7930;
@@ -396,7 +396,13 @@ h3{
 }
 .socials {
     display: table-cell;
-    vertical-align:top;
+    vertical-align:middle;
     padding-top: 100px; 
     padding-right: 50px;
 }
+.socials a {
+    color: #111;
+}
+.socials a:hover {
+    opacity: 50%;
+    color: #9e7930;
