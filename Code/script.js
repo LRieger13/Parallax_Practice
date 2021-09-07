@@ -23,4 +23,9 @@ timeline
     .setPin(".section")
     .addTo(controller);
 
-    
+
+/* CARD FLIP TO FULL DIV
+let card = document.querySelector('.cards');
+card.addEventListener('click', function(){
+    card.classList.toggle('is-flipped');
+}); */
