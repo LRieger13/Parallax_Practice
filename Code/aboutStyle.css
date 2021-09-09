@@ -244,6 +244,13 @@ h3{
     width: 100%;
 }
 
+.info {
+    font-family: paragraph;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
 .cards {
     display: absolute;
     width: 50%;
