@@ -37,22 +37,31 @@ nav h4 {
 }
 .main-title {
     position: absolute;
-    top: 20%;
-    left: 20%;
-    font-size:65px;
+    top: 10%;
+    right: 15%;
+    font-size:75px;
     transform: translate(-20%, -20%);
     font-family: 'bigFont';
-    color: #fad888;
+    color: #f8d278;
 }
 
+.sub {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    font-size:25px;
+    transform: translate(-20%, -20%);
+    font-family: 'paragraph';
+    color: #f8d278;
+}
 @font-face {
     font-family: bigFont;
-    src: url('/Fonts/Tox\ Typewriter.ttf');
+    src: url('/Fonts/LongLy-Regular.otf');
 }
 
 @font-face {
     font-family: paragraph;
-    src: url('/Mushy\ Loversy.ttf');
+    src: url('/Fonts/Mushy\ Loversy.ttf');
 }
 
 
